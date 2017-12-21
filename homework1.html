@@ -4,22 +4,23 @@
   </head>
   <body>
     <h1>アップル製品の価格調査</h1>
+    <ul>
     <script type="text/javascript">
       var product = ["Macbook Air 11inch","Macbook Air 13inch","Macbook Pro Retina 13 inch","Macbook Pro Retina 15inch","iMac 21.5inch"];
 
       var price = [88800, 98800, 128800, 194800, 108800];
 
-      for (var i = 0; i < 5; i++){
+      for (var i = 0; i < product.length; i++){
+        document.write("<li>")
         document.write(product[i]+"は"+price[i]+"円です。");
-
           if(price[i] <= 100000){ //price[i]が100000以下の場合
             document.write("10万円以下");
-          } else { //price[i]が100000以下でない場合　　    　
+          } else { //price[i]が100000以下でない場合
             document.write("10万円以上");
           }
-
-        document.write("<br>")
+        document.write("</li>")
       }
     </script>
-　</body>
+    </ul>
+  </body>
 </html>
